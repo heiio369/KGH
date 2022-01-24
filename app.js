@@ -1,1 +1,5 @@
-const calculator = {
+const kim = {
+  name: "kims"
+  color: "yellow"
+}
+
