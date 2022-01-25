@@ -1,25 +1,11 @@
-const calculator = {
-  plus: function (a, b) {
-    alert(a + b);
-  },
-  minus: function (a, b) {
-    alert(a - b);
-  },
-  divide: function (a, b) {
-    alert(a / b);
-  },
-  times: function (a, b) {
-    alert(a * b);
-  },
-  power: function (a, b) {
-    alert(a ** b);
-  },
-};
+const age = parseInt(prompt("나이를 입력하세요."));
 
-calculator.plus(5, 2);
-
-calculator.minus(5, 2);
-
-calculator.divide(5, 2);
-
-calculator.power(5, 2);
+if (isNaN(age) || age < 0) {
+  alert("진짜 나이를 입력하세요.");
+} else if (age < 18) {
+  console.log("금지");
+} else if (age >= 18 && age <= 50) {
+  console.log("가능");
+} else {
+  console.log("금지");
+}
