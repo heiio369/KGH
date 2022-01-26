@@ -1,11 +1,18 @@
-const age = parseInt(prompt("나이를 입력하세요."));
+const title = document.querySelector("div.hello:first-child h1");
 
-if (isNaN(age) || age < 0) {
-  alert("진짜 나이를 입력하세요.");
-} else if (age < 18) {
-  console.log("금지");
-} else if (age >= 18 && age <= 50) {
-  console.log("가능");
-} else {
-  console.log("금지");
+console.dir(title);
+
+function handleTitleClick() {
+  title.style.color = "blue";
 }
+
+function handleMouseEnter() {
+  title.innerText = "mouse is here!";
+}
+function handleMouseLeave() {
+  title.innerText = "mouse is out!";
+}
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
